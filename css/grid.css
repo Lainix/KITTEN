@@ -1,59 +1,80 @@
+/* Kitty grid css */
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+/* imagen de dia */
+
+/* inicio con una imagen de fondo */
 
 .medium {
-    background-image: url(../assets/images/sunny-day.jpg);
-    background-size: cover;
-    background-position: center;
-    display: block;
+  background-image: url(../assets/images/sunny-day.jpg);
+  background-size: cover;
+  background-position: center;
+  display: block;
 }
+
+/* para que se oculten las otras imagenes de fondo */
 
 .small {
-    display: none;
+  display: none;
 }
+
+/* para que se oculte */
 
 .large {
-    display: none;
+  display: none;
 }
 
+/* kitty */
+
+/* Se posicione en el centro */
+
 .kitty {
-    margin: 20% 35% 0 35%;
-    display: inline-block;
+  margin: 20% 35% 0 35%;
+  display: inline-block;
 }
 
 .kitty img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
+
+/* Media queries*/
+
+/* Cuando se cumpla el tamaño maximo de 1024px va a cambiar la imagen de dia por la imagen de la tarde */
 
 @media (max-width: 1024px) {
-    .large {
-        background-image: url(../assets/images/dawn.png);
-        background-size: cover;
-        display: block;
-    }
-    .medium {
-        display: none;
-    }
-    .small {
-        display: none;
-    }
+  .large {
+    background-image: url(../assets/images/dawn.png);
+    background-size: cover;
+    display: block;
+  }
+  /* Para que muestre el gatito correspondiente */
+  .medium {
+    display: none;
+  }
+  .small {
+    display: none;
+  }
 }
+
+/* Cuando se cumpla el tamaño maximo de 576px va a cambiar la imagen de tarde por la imagen de la noche */
 
 @media (max-width: 576px) {
-    .small {
-        background-image: url(../assets/images/night.jpg);
-        background-size: cover;
-        display: block;
-    }
-    .medium {
-        display: none;
-    }
-    .large {
-        display: none;
-    }
+  .small {
+    background-image: url(../assets/images/night.jpg);
+    background-size: cover;
+    display: block;
+  }
+  /* Oculta los otros gatitos y muestra el correspondiente */
+  .medium {
+    display: none;
+  }
+  .large {
+    display: none;
+  }
 }
-
