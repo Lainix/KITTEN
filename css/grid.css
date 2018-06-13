@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.medium {
+    background-image: url(../assets/images/sunny-day.jpg);
+    background-size: cover;
+    background-position: center;
+    display: block;
+}
+
+.small {
+    display: none;
+}
+
+.large {
+    display: none;
+}
+
+.kitty {
+    margin: 20% 35% 0 35%;
+    display: inline-block;
+}
+
+.kitty img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+    .large {
+        background-image: url(../assets/images/dawn.png);
+        background-size: cover;
+        display: block;
+    }
+    .medium {
+        display: none;
+    }
+    .small {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .small {
+        background-image: url(../assets/images/night.jpg);
+        background-size: cover;
+        display: block;
+    }
+    .medium {
+        display: none;
+    }
+    .large {
+        display: none;
+    }
+}
+
